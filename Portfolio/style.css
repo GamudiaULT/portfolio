@@ -1,0 +1,445 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#f6f8fc,
+
+#eef3ff
+
+);
+
+}
+
+body.dark{
+background:#1b1f27;
+color:white;
+}
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:80px;
+
+padding:170px 10% 120px;
+
+min-height:100vh;
+
+}
+
+.hero h1{
+
+font-size:64px;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+.hero span{
+
+color:#304ffe;
+
+}
+
+.hero img{
+
+width:370px;
+
+height:370px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:8px solid white;
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.18);
+
+transition:.4s;
+
+}
+
+.hero img:hover{
+
+transform:translateY(-10px);
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 34px;
+
+border-radius:50px;
+
+background:#304ffe;
+
+color:white;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+box-shadow:0 10px 30px rgba(48,79,254,.35);
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+background:#1e3dff;
+
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.skill{
+
+padding:28px;
+
+border-radius:12px;
+
+background:white;
+
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.skill:hover{
+
+transform:translateY(-8px);
+
+background:#304ffe;
+
+color:white;
+
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.card{
+
+background:white;
+
+overflow:hidden;
+
+border-radius:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 30px 50px rgba(0,0,0,.15);
+
+}
+
+
+.card img{
+width:100%;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:600px;
+margin:auto;
+}
+
+input,
+textarea{
+
+padding:18px;
+
+font-size:16px;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+outline:none;
+
+border-color:#304ffe;
+
+box-shadow:0 0 15px rgba(48,79,254,.15);
+
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+cursor:pointer;
+}
+
+footer{
+padding:40px;
+text-align:center;
+}
+
+#topBtn{
+position:fixed;
+right:30px;
+bottom:30px;
+display:none;
+padding:12px;
+border:none;
+border-radius:50%;
+}
+
+.projects img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.card h3{
+
+    margin:20px;
+
+}
+
+.card p{
+
+    margin:0 20px 25px;
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+.hero-image img{
+
+    width:350px;
+
+    border-radius:50%;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+.card{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 40px rgba(0,0,0,.15);
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+
+
+section h2{
+
+font-size:42px;
+
+margin-bottom:40px;
+
+position:relative;
+
+}
+
+section h2::after{
+
+content:"";
+
+display:block;
+
+width:70px;
+
+height:5px;
+
+margin-top:12px;
+
+background:#304ffe;
+
+border-radius:50px;
+
+}
+
+section{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease;
+
+}
+
+section.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+footer{
+
+background:#202842;
+
+color:white;
+
+text-align:center;
+
+padding:60px;
+
+margin-top:80px;
+
+}
+
+footer .social{
+
+margin:25px 0;
+
+}
+
+footer a{
+
+font-size:26px;
+
+color:white;
+
+margin:0 15px;
+
+transition:.3s;
+
+}
+
+footer a:hover{
+
+color:#8ea2ff;
+
+}
