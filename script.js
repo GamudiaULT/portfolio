@@ -175,3 +175,11 @@ form.addEventListener("submit", function(e){
     });
 
 });
+
+const bgMusic = document.getElementById("bgMusic");
+
+document.addEventListener("click", function () {
+
+    bgMusic.play();
+
+}, { once: true });
