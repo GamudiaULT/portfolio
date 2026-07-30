@@ -176,10 +176,25 @@ form.addEventListener("submit", function(e){
 
 });
 
-const bgMusic = document.getElementById("bgMusic");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
-document.addEventListener("click", function () {
+let playing = false;
 
-    bgMusic.play();
+musicBtn.addEventListener("click", () => {
 
-}, { once: true });
+    if (!playing) {
+
+        music.play();
+        musicBtn.innerHTML = "🔇 Pause Music";
+
+    } else {
+
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Music";
+
+    }
+
+    playing = !playing;
+
+});
