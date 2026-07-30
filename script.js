@@ -183,15 +183,19 @@ let playing = false;
 
 musicBtn.addEventListener("click", () => {
 
-    if (!playing) {
+    if (!playing){
 
         music.play();
-        musicBtn.innerHTML = "🔇 Pause Music";
 
-    } else {
+        musicBtn.textContent = "🔇 Pause Music";
+
+    }
+
+    else{
 
         music.pause();
-        musicBtn.innerHTML = "🎵 Play Music";
+
+        musicBtn.textContent = "🎵 Play Music";
 
     }
 
