@@ -448,23 +448,25 @@ color:#8ea2ff;
 
 position:fixed;
 
-bottom:25px;
+bottom:30px;
 
-right:25px;
+right:30px;
 
-padding:12px 18px;
+background:#1F2B45;
+
+color:white;
+
+padding:14px 22px;
 
 border:none;
 
 border-radius:50px;
 
-background:#1f2b45;
-
-color:white;
-
 cursor:pointer;
 
-font-size:16px;
+font-size:15px;
+
+font-weight:600;
 
 box-shadow:0 8px 20px rgba(0,0,0,.2);
 
@@ -476,6 +478,8 @@ z-index:999;
 
 #musicBtn:hover{
 
-transform:scale(1.08);
+transform:scale(1.05);
+
+background:#2D4066;
 
 }
