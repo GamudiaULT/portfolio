@@ -177,33 +177,21 @@ form.addEventListener("submit", function(e){
 });
 
 const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
-
-console.log(music);
-console.log(musicBtn);
 
 music.volume = 0.2;
 
-let playing = false;
-
-musicBtn.addEventListener("click", () => {
-
-    if (!playing){
-
-        music.play();
-
-        musicBtn.textContent = "🔇 Pause Music";
-
-    }
-
-    else{
-
-        music.pause();
-
-        musicBtn.textContent = "🎵 Play Music";
-
-    }
-
-    playing = !playing;
-
+// Try autoplay
+window.addEventListener("load", () => {
+    music.play().catch(() => {
+        console.log("Autoplay blocked. Waiting for user interaction.");
+    });
 });
+
+// If autoplay is blocked, play on first click
+document.addEventListener("click", function playOnFirstClick() {
+    if (music.paused) {
+        music.play().catch(console.error);
+    }
+
+    document.removeEventListener("click", playOnFirstClick);
+}, { once: true });
