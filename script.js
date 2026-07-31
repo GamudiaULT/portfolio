@@ -179,6 +179,9 @@ form.addEventListener("submit", function(e){
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
+console.log(music);
+console.log(musicBtn);
+
 music.volume = 0.2;
 
 let playing = false;
