@@ -179,6 +179,8 @@ form.addEventListener("submit", function(e){
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
+music.volume = 0.2;
+
 let playing = false;
 
 musicBtn.addEventListener("click", () => {
